@@ -17,3 +17,5 @@ port is localhost:8081 to container:8080
 
 # References
 https://dev.classmethod.jp/articles/plantuml-server-on-docker/
+
+https://plantuml.com/ja/
