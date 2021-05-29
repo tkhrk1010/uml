@@ -5,7 +5,7 @@ use VSCode
 1. start plantuml server
     $ cd plantuml-server  
     $ docker-compose up -d  
-port is localhost:8081 to container:8080
+port is localhost:9080 to container:8080
 
 2. install plugin
   PlantUML  
