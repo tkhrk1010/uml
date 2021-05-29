@@ -1,11 +1,18 @@
 .DEFAULT_GOAL := help
 
-start: ## run plantuml server
-	@printf '\033[34m%s\033[m\n' 'docker run -d -p 8081:8080 --name plantuml-server plantuml/plantuml-server:jetty'
-	@docker run -d -p 8081:8080 --name plantuml-server plantuml/plantuml-server:jetty
+build: ## build container image
+	@printf '\033[34m%s\033[m\n' 'docker-compose build --no-cache'
+	@docker-compose build --no-cache
 
-stop: ## stop plantuml server
-	@docker container stop plantuml-server
+up: ## run plantuml server
+	@printf '\033[34m%s\033[m\n' 'docker-compose up -d'
+	@docker-compose up -d
+
+down: ## stop plantuml server
+	@printf '\033[34m%s\033[m\n' 'docker-compose down'
+	@docker-compose down
+
+rebuild: down build up ## rebuild container
 
 ls: ## list container
 	@printf '\033[34m%s\033[m\n' 'docker container ls'

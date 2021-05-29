@@ -3,5 +3,5 @@
     "statusBar.background": "#a19418",
   },
   "plantuml.render": "PlantUMLServer",
-  "plantuml.server": "http://localhost:8080"
+  "plantuml.server": "http://localhost:9080"
 }
