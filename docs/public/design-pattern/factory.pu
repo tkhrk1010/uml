@@ -5,39 +5,33 @@ package framework {
   class Product
 }
 
-package idcard {
-  class IDCardFactory
-  class IDCard
+package concrete {
+  class concreteFactory
+  class concreteProduct
 }
 
 class Factory {
   create()
   createProduct()
-  registerProduct()
 }
 
 class Product {
-  use()
+  method()
 }
 
-class IDCardFactory {
-  owenrs
+class concreteFactory {
   createProduct()
-  registerProduct()
-  getOwners()
 }
 
-class IDCard {
-  owner
-  use()
-  getOwner()
+class concreteProduct {
+  method()
 }
 
 
 Factory --> Product : Creates >
-IDCardFactory --|> Factory
-IDCardFactory --> IDCard : Creates >
-IDCard --|> Product
+concreteFactory --> concreteProduct : Creates >
+concreteFactory --|> Factory
+concreteProduct --|> Product
 
 
 
