@@ -1,8 +1,11 @@
 .DEFAULT_GOAL := help
 
-server: ## run plantuml server
-	@printf '\033[34m%s\033[m\n' 'docker run -d -p 8081:8080 plantuml/plantuml-server:jetty'
-	@docker run -d -p 8081:8080 plantuml/plantuml-server:jetty
+start: ## run plantuml server
+	@printf '\033[34m%s\033[m\n' 'docker run -d -p 8081:8080 --name plantuml-server plantuml/plantuml-server:jetty'
+	@docker run -d -p 8081:8080 --name plantuml-server plantuml/plantuml-server:jetty
+
+stop: ## stop plantuml server
+	@docker container stop plantuml-server
 
 ls: ## list container
 	@printf '\033[34m%s\033[m\n' 'docker container ls'
