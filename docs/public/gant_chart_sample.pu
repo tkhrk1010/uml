@@ -1,0 +1,23 @@
+@startgantt
+-- 開発対象1 --
+Project starts 2020-07-01
+' 見積もり
+[プロトタイプを設計] lasts 3 days
+[プロトタイプを実装] lasts 4 days
+[プロトタイプをテスト] lasts 10 days
+
+' 実績
+[プロトタイプを設計] starts 2020-07-01 and ends 2020-07-07
+[プロトタイプを実装] starts 2020-07-08
+[プロトタイプをテスト] starts at [プロトタイプを実装]'s end
+
+-- すべての例 --
+[Task 1 (1日)] lasts 1 day
+[T2 (5日)] lasts 5 days
+[T3 (1週間)] lasts 1 week
+[T4 (1週間と4日)] lasts 1 week and 4 days
+[T5 (2週間)] lasts 2 weeks
+
+
+
+@endgantt
